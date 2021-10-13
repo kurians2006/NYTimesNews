@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pFu-Gs-FrS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kfd-Aq-osj">
+            <objects>
+                <navigationController id="pFu-Gs-FrS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" id="ong-Yd-6Iz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemBlueColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qmI-1n-SzJ" kind="relationship" relationship="rootViewController" id="bFd-Li-IB8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oa1-wW-hrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="45"/>
+        </scene>
+        <!--NY Times  News-->
+        <scene sceneID="2q3-p9-mOs">
+            <objects>
+                <viewController id="qmI-1n-SzJ" customClass="NewsViewController" customModule="NYTimesNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hm3-ON-Lll">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yj6-qX-1hh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qmI-1n-SzJ" id="nFC-DY-9Yp"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UOH-Wr-Hmy">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXa-VB-e3l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Yj6-qX-1hh" secondAttribute="bottom" id="6ZH-ns-8Mw"/>
+                            <constraint firstItem="Yj6-qX-1hh" firstAttribute="trailing" secondItem="XXa-VB-e3l" secondAttribute="trailing" id="9lh-iG-Lku"/>
+                            <constraint firstItem="Yj6-qX-1hh" firstAttribute="top" secondItem="XXa-VB-e3l" secondAttribute="top" id="T0s-nW-oWM"/>
+                            <constraint firstItem="UOH-Wr-Hmy" firstAttribute="centerX" secondItem="hm3-ON-Lll" secondAttribute="centerX" id="feb-oB-C1c"/>
+                            <constraint firstItem="UOH-Wr-Hmy" firstAttribute="centerY" secondItem="hm3-ON-Lll" secondAttribute="centerY" id="y25-5c-RXR"/>
+                            <constraint firstItem="Yj6-qX-1hh" firstAttribute="leading" secondItem="XXa-VB-e3l" secondAttribute="leading" id="z4v-rh-ghU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NY Times  News" largeTitleDisplayMode="always" id="c2c-Nh-EIl" userLabel="NY Times News"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="UOH-Wr-Hmy" id="KSI-ak-eo9"/>
+                        <outlet property="tableView" destination="Yj6-qX-1hh" id="YPZ-IM-Pwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crm-95-Hvf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="44.866071428571423"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="Osj-WV-L13">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailViewController" id="z7i-zg-u3T" customClass="NewsDetailViewController" customModule="NYTimesNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lqc-ru-yX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vrA-oF-IVr">
+                                <rect key="frame" x="20" y="54" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="lig-KH-7aj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Maria Caramer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8I-4v-yvH">
+                                <rect key="frame" x="20" y="319" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-08-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hi-Kd-0FC">
+                                <rect key="frame" x="20" y="348.5" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-yI-50Q">
+                                <rect key="frame" x="20" y="378" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="highlightedColor" systemColor="systemGrayColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zyh-C2-Mfm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V8I-4v-yvH" firstAttribute="leading" secondItem="Zyh-C2-Mfm" secondAttribute="leading" constant="20" id="4Qm-aB-jJZ"/>
+                            <constraint firstItem="Zyh-C2-Mfm" firstAttribute="trailing" secondItem="gyP-yI-50Q" secondAttribute="trailing" constant="20" id="93K-lp-sdX"/>
+                            <constraint firstItem="gyP-yI-50Q" firstAttribute="top" secondItem="0hi-Kd-0FC" secondAttribute="bottom" constant="10" id="Lnm-dK-DIA"/>
+                            <constraint firstItem="gyP-yI-50Q" firstAttribute="leading" secondItem="Zyh-C2-Mfm" secondAttribute="leading" constant="20" id="NGy-or-xK2"/>
+                            <constraint firstItem="Zyh-C2-Mfm" firstAttribute="trailing" secondItem="0hi-Kd-0FC" secondAttribute="trailing" constant="20" id="PrK-fk-7qa"/>
+                            <constraint firstItem="0hi-Kd-0FC" firstAttribute="leading" secondItem="Zyh-C2-Mfm" secondAttribute="leading" constant="20" id="SWU-qA-yn8"/>
+                            <constraint firstItem="0hi-Kd-0FC" firstAttribute="top" secondItem="V8I-4v-yvH" secondAttribute="bottom" constant="10" id="Z8K-VE-tql"/>
+                            <constraint firstItem="Zyh-C2-Mfm" firstAttribute="trailing" secondItem="vrA-oF-IVr" secondAttribute="trailing" constant="20" id="aD8-Xn-Hsq"/>
+                            <constraint firstItem="Zyh-C2-Mfm" firstAttribute="trailing" secondItem="V8I-4v-yvH" secondAttribute="trailing" constant="20" id="cDs-Z2-th5"/>
+                            <constraint firstItem="vrA-oF-IVr" firstAttribute="leading" secondItem="Zyh-C2-Mfm" secondAttribute="leading" constant="20" id="fy8-qb-fJU"/>
+                            <constraint firstItem="vrA-oF-IVr" firstAttribute="top" secondItem="Zyh-C2-Mfm" secondAttribute="top" constant="10" id="n3z-xN-lVd"/>
+                            <constraint firstItem="V8I-4v-yvH" firstAttribute="top" secondItem="vrA-oF-IVr" secondAttribute="bottom" constant="15" id="vcH-Wj-87M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articleImage" destination="vrA-oF-IVr" id="qed-5p-s6v"/>
+                        <outlet property="byLabel" destination="V8I-4v-yvH" id="bze-8u-FA6"/>
+                        <outlet property="content" destination="gyP-yI-50Q" id="Jjc-YP-Nkb"/>
+                        <outlet property="publishedLabel" destination="0hi-Kd-0FC" id="qEl-1i-Wyw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUT-gZ-j5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="130" id="vIF-fh-NDe" customClass="NewsTableViewCell" customModule="NYTimesNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vIF-fh-NDe" id="HIY-4j-rI3">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-vM-xUe">
+                        <rect key="frame" x="20" y="5" width="382" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-BH-6RV">
+                                <rect key="frame" x="20" y="10" width="75" height="100"/>
+                                <color key="backgroundColor" red="0.60000443459999997" green="0.60396975279999998" blue="0.59999996420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="WVp-us-2A3"/>
+                                    <constraint firstAttribute="height" constant="100" id="s75-tc-mRv"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLU-xg-pDt">
+                                <rect key="frame" x="115" y="10" width="42" height="19.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9D-QR-Idl">
+                                <rect key="frame" x="115" y="39.5" width="247" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnt-RX-YKw">
+                                <rect key="frame" x="333.5" y="95.5" width="28.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.4392187595" green="0.43921005730000001" blue="0.4392159283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.badge.clock.rtl" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-vg-oUp">
+                                <rect key="frame" x="303.5" y="94" width="20" height="20"/>
+                                <color key="tintColor" name="SubtitleTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="I2g-Pq-9lO"/>
+                                    <constraint firstAttribute="width" constant="18.5" id="sMl-43-X6V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="42R-zf-ztF"/>
+                            <constraint firstItem="g9D-QR-Idl" firstAttribute="top" secondItem="JLU-xg-pDt" secondAttribute="bottom" constant="10" id="BBd-is-fky"/>
+                            <constraint firstItem="JLU-xg-pDt" firstAttribute="top" secondItem="WAn-BH-6RV" secondAttribute="top" id="Dm7-HI-xun"/>
+                            <constraint firstItem="JLU-xg-pDt" firstAttribute="leading" secondItem="WAn-BH-6RV" secondAttribute="trailing" constant="20" id="Ew4-oU-cX0"/>
+                            <constraint firstItem="bnt-RX-YKw" firstAttribute="top" secondItem="g9D-QR-Idl" secondAttribute="bottom" constant="20" id="Ffr-1s-c4W"/>
+                            <constraint firstAttribute="bottom" secondItem="bnt-RX-YKw" secondAttribute="bottom" constant="10" id="K1P-5e-XAf"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JLU-xg-pDt" secondAttribute="trailing" constant="20" id="Kn3-cd-Cdo"/>
+                            <constraint firstItem="WAn-BH-6RV" firstAttribute="centerY" secondItem="IoV-vM-xUe" secondAttribute="centerY" id="QLl-8E-dyP"/>
+                            <constraint firstItem="WAn-BH-6RV" firstAttribute="leading" secondItem="IoV-vM-xUe" secondAttribute="leading" constant="20" id="bmW-yn-d9U"/>
+                            <constraint firstItem="g9D-QR-Idl" firstAttribute="leading" secondItem="WAn-BH-6RV" secondAttribute="trailing" constant="20" id="mG2-Ju-T5e"/>
+                            <constraint firstAttribute="trailing" secondItem="g9D-QR-Idl" secondAttribute="trailing" constant="20" id="ncl-rn-WVP"/>
+                            <constraint firstItem="bnt-RX-YKw" firstAttribute="leading" secondItem="FSM-vg-oUp" secondAttribute="trailing" constant="10" id="o9Q-8N-o9M"/>
+                            <constraint firstItem="bnt-RX-YKw" firstAttribute="centerY" secondItem="FSM-vg-oUp" secondAttribute="centerY" id="odL-dh-Ay3"/>
+                            <constraint firstAttribute="trailing" secondItem="bnt-RX-YKw" secondAttribute="trailing" constant="20" id="snr-9t-alQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.984274447" green="0.98441725970000005" blue="0.9764701724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IoV-vM-xUe" secondAttribute="bottom" constant="5" id="3UQ-Qw-EEZ"/>
+                    <constraint firstItem="IoV-vM-xUe" firstAttribute="leading" secondItem="HIY-4j-rI3" secondAttribute="leading" constant="20" id="FKL-nI-IgQ"/>
+                    <constraint firstItem="IoV-vM-xUe" firstAttribute="top" secondItem="HIY-4j-rI3" secondAttribute="top" constant="5" id="Stg-yA-cgh"/>
+                    <constraint firstAttribute="trailing" secondItem="IoV-vM-xUe" secondAttribute="trailing" constant="20" id="g9e-Rk-MMo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellContainerView" destination="IoV-vM-xUe" id="Ga3-Bj-Cxe"/>
+                <outlet property="publishedOnLabel" destination="bnt-RX-YKw" id="Mn1-tz-Rkk"/>
+                <outlet property="reporterLabel" destination="g9D-QR-Idl" id="2Ck-8x-ewZ"/>
+                <outlet property="thumbnailImageView" destination="WAn-BH-6RV" id="veI-B8-1CB"/>
+                <outlet property="titleLabel" destination="JLU-xg-pDt" id="Lkb-Tl-EHB"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="188.16964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
+        <namedColor name="SubtitleTextColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
